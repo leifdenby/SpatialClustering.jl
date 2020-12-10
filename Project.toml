@@ -1,3 +1,8 @@
+name = "SpatialClustering"
+uuid = "bda652cf-a738-442e-8cc0-1a45c00ffd5c"
+authors = ["Leif Denby <leif@denby.eu>"]
+version = "0.1.0"
+
 [deps]
 ColorTypes = "3da002f7-5984-5a60-b8a6-cbb66c0b333f"
 FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
@@ -9,3 +14,11 @@ Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
 NCDatasets = "85f8d34a-cbdd-5861-8df4-14fed0d494ab"
 QuartzImageIO = "dca85d43-d64c-5e67-8c65-017450d5d020"
 ShiftedArrays = "1277b4bf-5013-50f5-be3d-901d8477a67a"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+
+[extras]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Documenter", "Test"]
