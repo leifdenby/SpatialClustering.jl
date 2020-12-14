@@ -45,3 +45,9 @@ function EmbColor(x::AbstractArray{T,3}) where T<:AbstractFloat
     #  map(f, eachslice(v, dims=(2,3)))
     [EmbColor(x[i,j,:]) for i in 1:nx, j in 1:ny]
 end
+
+function segment_array(field::Array{T,3}; k=1.0) where T<:AbstractFloat
+    emb_field = SpatialClustering.EmbColor(field)
+    segments = ImageSegmentation.felzenszwalb(emb_field, k, 0)
+    segments.image_indexmap
+end
